@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { List } from "./components/List";
+import Nav from "./components/Nav";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	const myNumber = 100;
+	const people = [{
+		id: 0, // Used in JSX as a key
+		name: 'Creola Katherine Johnson',
+		profession: 'mathematician',
+		accomplishment: 'spaceflight calculations',
+		imageId: 'MK3eW3A'
+		}, {
+		id: 1, // Used in JSX as a key
+		name: 'Mario José Molina-Pasquel Henríquez',
+		profession: 'chemist',
+		accomplishment: 'discovery of Arctic ozone hole',
+		imageId: 'mynHUSa'
+		}, {
+		id: 2, // Used in JSX as a key
+		name: 'Mohammad Abdus Salam',
+		profession: 'physicist',
+		accomplishment: 'electromagnetism theory',
+		imageId: 'bE7W1ji'
+		}, {
+		id: 3, // Used in JSX as a key
+		name: 'Percy Lavon Julian',
+		profession: 'chemist',
+		accomplishment: 'pioneering cortisone drugs, steroids and birth control pills',
+		imageId: 'IOjWm71'
+		}, {
+		id: 4, // Used in JSX as a key
+		name: 'Subrahmanyan Chandrasekhar',
+		profession: 'astrophysicist',
+		accomplishment: 'white dwarf star mass calculations',
+		imageId: 'lrWQx8l'
+		}];
+	
+	return (
+		<>
+			<Nav title="My Title" test={myNumber} cipri="Neamtu"></Nav>
+			<div className="page">CN Project</div>
+			<List items={people} />
+		</>
+	)
 }
 
 export default App
