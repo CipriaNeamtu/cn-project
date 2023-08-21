@@ -1,17 +1,23 @@
-import { ReactNode } from "react";
+import { mainNavProps } from "../utils/constants";
 
-type NavProps = {
-	title: string,
-	test: number,
-	cipri?: 'Neamtu' | 'Anton',
-	children?: ReactNode,
+type NavProps<T> = {
+	items: T[];
 }
 
-const Nav = ({ title, test, cipri, children} : NavProps) => {
+const Nav = <T extends mainNavProps>({ items } : NavProps<T>) => {
+	const goToHomePage = (item: T) => {
+		console.log('%cCN', `font-weight: 900; background-color: #06856F; color: #FFFFFF; padding: 5px 15px; border-radius: 4px;`, ' ~ file: Nav.tsx:11 ~ goToHomePage ~ goToHomePage:', 'Page info:', item);
+	}
+	
 	return (
-		<div>
-			{title} + {test} + {cipri}
-			<p>{children}</p>
+		<div className="nav_component">
+			<div className="nav_buttons">
+				{items.map((item, index) => {
+					return (
+						<div className="nav_button" key={index} onClick={() => goToHomePage(item)}>{item.name}</div>
+					)
+				})}
+			</div>
 		</div>
 	)
 }

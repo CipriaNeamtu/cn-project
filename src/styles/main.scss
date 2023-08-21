@@ -1,7 +1,12 @@
+// Main scss
 @use './page';
 @use './colors';
 @use './helpers';
 @use './variables';
 @use './breakpoints';
-@use './globals.scss';
+@use './globals';
+
+
+// Components
+@use './components/nav.scss';
 

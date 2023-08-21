@@ -1,16 +1,11 @@
-import { List } from "./components/List";
 import Nav from "./components/Nav";
-import { peopleList } from "./before-server/peopleList";
+import { mainNav } from "./utils/constants";
 
 function App() {
-	const myNumber = 100;
-	
-	
 	return (
 		<>
-			<Nav title="My Title" test={myNumber} cipri="Neamtu"></Nav>
+			<Nav items={mainNav}></Nav>
 			<div className="page">CN Project</div>
-			<List items={peopleList} />
 		</>
 	)
 }
