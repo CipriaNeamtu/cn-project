@@ -1,3 +1,5 @@
+@use 'breakpoints' as *;
+
 :root {
 	/* SPACES */
 	--space-5xs: 2px;
@@ -35,4 +37,10 @@
 	--mega-large-container: 1320px;
 	--extra-large-container: 1140px;
 	--small-container: 768px;
+
+	--vw: 1vw;
+
+	@include screen-mega-large {
+		--vw: 19.2px;
+	}
 }
