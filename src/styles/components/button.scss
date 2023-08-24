@@ -1,0 +1,13 @@
+@use '../flex' as *;
+
+.button {
+    @include flex-inline(center, center);
+    padding: 0px 27px;
+    border-radius: 8px;
+    background: var(--color-pacific-blue);
+
+    &.small_white {
+        @include flex-inline(center, center);
+        padding: 9px 20px 10px 20px;
+    }
+}

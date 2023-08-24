@@ -1,12 +1,36 @@
-// Main scss
+/* Main SCSS */
 @use './page';
 @use './colors';
 @use './helpers';
 @use './variables';
 @use './breakpoints';
 @use './globals';
+@use './flex.scss';
 
 
-// Components
-@use './components/nav.scss';
+/* Main Components */
+@use './components/nav';
+
+
+/* Components */
+@use './components/typography';
+@use './components/button';
+@use './components/info-cards';
+
+
+/* Pages */
+@use './pages/home';
+
+
+/* FONT POPPINS*/
+@font-face {
+	font-family: 'Poppins';
+	src: url('../Font/Poppins/Poppins-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
 

@@ -1,0 +1,43 @@
+@use '../flex' as *;
+
+.home {
+	@include flexDirection(center, center, column);
+	
+	.home_hero_wrapper {
+		@include flex-justify(center);
+		width: 100%;
+		background-color: var(--color-cinder);
+
+		.home_hero {
+			@include flex-align(center);
+			width: var(--large-container);
+			background-color: var(--color-cinder);
+	
+			.hero_left {
+				width: 50%;
+	
+				.left_wrapper {
+					width: 554px;
+					padding: 112px 0;
+	
+					.description {
+						margin-top: var(--space-xs);
+					}
+	
+					.button {
+						margin-top: var(--space-md);
+					}
+				}
+			}
+	
+			.hero_right {
+				@include flex-justify(flex-end);
+				width: 50%;
+	
+				img {
+					width: 75%;
+				}
+			}
+		}
+	}
+}
