@@ -1,29 +1,42 @@
-.nav_component {
+@use '../flex' as *;
+
+.nav {
 	display: flex;
 	justify-content: center;
-	width: 100%;
-	height: 80px;
+	height: var(--header-height);
 	flex-shrink: 0;
-	background-color: var(--color-main);
+	background-color: var(--color-cinder);
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-	.nav_buttons {
-		display: flex;
-		width: 530px;
-		height: 32px;
-		flex-shrink: 0;
-		margin: var(--space-md) 0;
-		gap: 77px;
+	.nav_wrapper {
+		@include flex(center, space-between);
+		width: var(--large-container);
 
-		.nav_button {
-			color: var(--color-white);
-			font-family: Poppins;
-			font-size: 18px;
-			font-style: normal;
-			font-weight: 500;
-			line-height: var(--space-xl); /* 177.778% */
-			text-transform: uppercase;
-			cursor: pointer;
+		.logo_small {
+			width: 40px;
+			height: 44px;
+			flex-shrink: 0;
+		}
+	
+		.nav_buttons {
+			display: flex;
+			width: 530px;
+			height: 32px;
+			flex-shrink: 0;
+			margin: var(--space-md) 0;
+			gap: 77px;
+	
+			.nav_button {
+				color: var(--color-white);
+				font-family: Poppins;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: var(--space-xl);
+				text-transform: uppercase;
+				cursor: pointer;
+			}
 		}
 	}
+
 }

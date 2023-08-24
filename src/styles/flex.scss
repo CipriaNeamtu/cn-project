@@ -1,0 +1,47 @@
+/* Mixin flex v.0.0 */
+
+@mixin flex($align-items, $justify-content) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+
+@mixin flexDirection($align-items, $justify-content, $flex-direction) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+	flex-direction: $flex-direction;
+}
+
+@mixin flex-align($align-items) {
+	display: flex;
+	align-items: $align-items;
+}
+
+@mixin flex-align-dir($align-items, $flex-direction) {
+	display: flex;
+	align-items: $align-items;
+	flex-direction: $flex-direction;
+}
+
+@mixin flex-justify($justify-content) {
+	display: flex;
+	justify-content: $justify-content;
+}
+
+@mixin flex-just-dir($justify-content, $flex-direction) {
+	display: flex;
+	justify-content: $justify-content;
+	flex-direction: $flex-direction;
+}
+
+@mixin flex-direction($flex-direction) {
+	display: flex;
+	flex-direction: $flex-direction;
+}
+
+@mixin flex-inline($align-items, $justify-content) {
+	display: inline-flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}

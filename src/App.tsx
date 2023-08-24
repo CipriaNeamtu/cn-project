@@ -1,13 +1,15 @@
 import Nav from "./components/Nav";
+import Home from "./pages/Home";
+
 import { mainNav } from "./utils/constants";
 
 function App() {
 	return (
 		<>
 			<Nav items={mainNav}></Nav>
-			<div className="page">CN Project</div>
+			<Home />
 		</>
 	)
 }
 
-export default App
+export default App;

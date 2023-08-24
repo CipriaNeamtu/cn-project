@@ -1,0 +1,105 @@
+.typography {
+	display: block;
+
+	// all elements inside the typography should inherit the typogrpahy styles
+	& > * {
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		color: inherit;
+		line-height: inherit;
+		letter-spacing: inherit;
+	}
+
+	&.inline {
+		display: inline;
+	}
+	&.inline-block {
+		display: inline-block;
+	}
+	&.link {
+		color: var(--color-primary-blue);
+		cursor: pointer;
+	}
+	&.underline {
+		text-decoration: underline;
+	}
+	&.italic {
+		font-style: italic;
+	}
+	&.line_through {
+		text-decoration: line-through;
+	}
+	&.uppercase {
+		text-transform: uppercase;
+	}
+	// Sequences of white space are collapsed. Lines are broken at newline characters.
+	&.multiline {
+		white-space: pre-line;
+	}
+	// Mark hidden overflow one line text with an ellipsis (...)
+	&.ellipsis {
+		max-width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		display: inline-block;
+	}
+	// Show pointer cursor for all button style typographies
+	&[class*="button_"] {
+		cursor: pointer;
+	}
+}
+
+@mixin font($size, $line, $weight, $letter, $color) {
+	font-size: $size;
+	line-height: $line;
+	font-weight: $weight;
+	letter-spacing: $letter;
+	color: $color;
+}
+
+.typography {
+	&.body {
+		&_medium_s_white{
+			@include font(18px, 36.5px, 400, 0.2px, var(--color-white));
+		}
+		&_medium_m_white{
+			@include font(20px, 61px, 500, 0.2px, var(--color-white));
+		}
+		&_medium_s {
+			@include font(18px, 27.9px, 400, 0px, var(--color-fiord));
+		}
+		&_medium_l {
+			@include font(24px, 36px, 500, 0px, var(--color-big-stone));
+		}
+		&_large {
+			@include font(40px, 61px, 600, 0.2px, var(--color-big-stone));
+		}
+		&_large_white {
+			@include font(40px, 61px, 600, 0.2px, var(--color-white));
+		}
+	}
+
+	&.button {
+		&_small_white {
+			@include font(18px, 19.5px, 500, 0.2px, var(--color-white));
+		}
+
+		&_medium_white{
+			@include font(20px, 61px, 500, 0.2px, var(--color-white));
+		}
+	}
+
+	&.card {
+		&_medium_blue {
+			@include font(32px, 48px, 600, 0px, var(--color-pacific-blue));
+		}
+		&_medium_green {
+			@include font(32px, 48px, 600, 0px, var(--color-java));
+		}
+		&_medium_red {
+			@include font(32px, 48px, 600, 0px, var(--color-radical-red));
+		}
+	}
+}
