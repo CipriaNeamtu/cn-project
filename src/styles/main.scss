@@ -10,12 +10,16 @@
 
 /* Main Components */
 @use './components/nav';
+@use './components/footer';
 
 
 /* Components */
 @use './components/typography';
 @use './components/button';
 @use './components/info-cards';
+@use './components/cards';
+@use './components/input';
+@use './components/alert';
 
 
 /* Pages */

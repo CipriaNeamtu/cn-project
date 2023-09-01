@@ -1,13 +1,44 @@
 @use '../flex' as *;
 
 .button {
-    @include flex-inline(center, center);
-    padding: 0px 27px;
-    border-radius: 8px;
-    background: var(--color-pacific-blue);
+	@include flex-inline(center, center);
+	padding: 0px 27px;
+	border-radius: 8px;
+	background-color: var(--color-pacific-blue);
+	cursor: pointer;
+	transition: all 0.2s ease;
+	user-select: none;
 
-    &.small_white {
-        @include flex-inline(center, center);
-        padding: 9px 20px 10px 20px;
-    }
+	&:active {
+		transform: scale(0.96);
+	}
+
+	&:hover {
+		background-color: var(--color-blue-cornflower);
+	}
+
+	&.small {
+		&_s_white { 
+			height: 42px;
+			padding: 12px 31px;
+			flex-shrink: 0;
+			border-radius: 4px;
+			box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+		}
+		
+		&_white {
+			@include flex-inline(center, center);
+			padding: 9px 20px 10px 20px;
+		}
+		
+		&_blue {
+			border-radius: 4px;
+			background-color: var(--color-solitude);
+			padding: 0 10px;
+
+			&:hover {
+				background-color: var(--color-light-blue-onahau);
+			}
+		}
+	}
 }

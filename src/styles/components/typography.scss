@@ -61,11 +61,32 @@
 
 .typography {
 	&.body {
-		&_medium_s_white{
+		&_small_mm_white {
+			@include font(16px, 30px, 400, 0px, var(--color-white));
+		}
+		&_small_m_white {
+			@include font(16px, 35px, 400, 0px, var(--color-white));
+		}
+		&_medium_xs_white {
+			@include font(18px, 27px, 400, 0.2px, var(--color-white));
+		}
+		&_medium_s_white {
 			@include font(18px, 36.5px, 400, 0.2px, var(--color-white));
 		}
-		&_medium_m_white{
+		&_medium_mm_white {
+			@include font(20px, 30px, 500, 0px, var(--color-white));
+		}
+		&_medium_m_white {
 			@include font(20px, 61px, 500, 0.2px, var(--color-white));
+		}
+		&_medium_xl_white {
+			@include font(28px, 35px, 700, 0px, var(--color-white));
+		}
+		&_small_m {
+			@include font(14px, 20px, 400, 0.2px, var(--color-regent-grey));
+		}
+		&_small_l {
+			@include font(16px, 25.6px, 400, 0px, var(--color-fiord));
 		}
 		&_medium_s {
 			@include font(18px, 27.9px, 400, 0px, var(--color-fiord));
@@ -73,8 +94,14 @@
 		&_medium_l {
 			@include font(24px, 36px, 500, 0px, var(--color-big-stone));
 		}
+		&_medium_xl {
+			@include font(28px, 42px, 500, 0px, var(--color-big-stone));
+		}
 		&_large {
 			@include font(40px, 61px, 600, 0.2px, var(--color-big-stone));
+		}
+		&_large_s_white {
+			@include font(36px, 32px, 600, 0.2px, var(--color-white));
 		}
 		&_large_white {
 			@include font(40px, 61px, 600, 0.2px, var(--color-white));
@@ -82,16 +109,27 @@
 	}
 
 	&.button {
+		&_small_s_white {
+			@include font(16px, 18px, 500, 0.3px, var(--color-white));
+		}
 		&_small_white {
 			@include font(18px, 19.5px, 500, 0.2px, var(--color-white));
 		}
-
-		&_medium_white{
+		&_small_blue {
+			@include font(14px, 32px, 500, 0.2px, var(--color-pacific-blue));
+		}
+		&_medium_white {
 			@include font(20px, 61px, 500, 0.2px, var(--color-white));
 		}
 	}
 
 	&.card {
+		&_small_green {
+			@include font(18px, 32px, 500, 0.2px, var(--color-mountain-meadow));
+		}
+		&_small_yellow {
+			@include font(18px, 32px, 500, 0.2px, var(--color-sunglow));
+		}
 		&_medium_blue {
 			@include font(32px, 48px, 600, 0px, var(--color-pacific-blue));
 		}
@@ -103,3 +141,52 @@
 		}
 	}
 }
+
+
+// &.body {
+// 		&_small_mm_white {
+// 			@include font(16px, 30px, 400, 0px, var(--color-white));
+// 		}
+// 		&_small_m_white {
+// 			@include font(16px, 35px, 400, 0px, var(--color-white));
+// 		}
+// 		&_medium_xs_white {
+// 			@include font(18px, 27px, 400, 0.2px, var(--color-white));
+// 		}
+// 		&_medium_s_white {
+// 			@include font(18px, 36.5px, 400, 0.2px, var(--color-white));
+// 		}
+// 		&_medium_mm_white {
+// 			@include font(20px, 30px, 500, 0px, var(--color-white));
+// 		}
+// 		&_medium_m_white {
+// 			@include font(20px, 61px, 500, 0.2px, var(--color-white));
+// 		}
+// 		&_medium_xl_white {
+// 			@include font(28px, 35px, 700, 0px, var(--color-white));
+// 		}
+// 		&_small_m {
+// 			@include font(14px, 20px, 400, 0.2px, var(--color-regent-grey));
+// 		}
+// 		&_small_l {
+// 			@include font(16px, 25.6px, 400, 0px, var(--color-fiord));
+// 		}
+// 		&_medium_s {
+// 			@include font(18px, 27.9px, 400, 0px, var(--color-fiord));
+// 		}
+// 		&_medium_l {
+// 			@include font(24px, 36px, 500, 0px, var(--color-big-stone));
+// 		}
+// 		&_medium_xl {
+// 			@include font(28px, 42px, 500, 0px, var(--color-big-stone));
+// 		}
+// 		&_large {
+// 			@include font(40px, 61px, 600, 0.2px, var(--color-big-stone));
+// 		}
+// 		&_large_s_white {
+// 			@include font(36px, 32px, 600, 0.2px, var(--color-white));
+// 		}
+// 		&_large_white {
+// 			@include font(40px, 61px, 600, 0.2px, var(--color-white));
+// 		}
+// 	}

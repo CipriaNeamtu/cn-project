@@ -3,7 +3,6 @@
 .info_cards {
     @include flex-justify(space-between);
     width: var(--large-container);
-    margin-top: 70px;
 
     .card {
         @include flex-align-dir(center, column);

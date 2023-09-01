@@ -24,6 +24,12 @@
 	flex-direction: $flex-direction;
 }
 
+@mixin flex-align-gap($align-items, $gap) {
+	display: flex;
+	align-items: $align-items;
+	gap: $gap;
+}
+
 @mixin flex-justify($justify-content) {
 	display: flex;
 	justify-content: $justify-content;
@@ -35,6 +41,12 @@
 	flex-direction: $flex-direction;
 }
 
+@mixin flex-just-gap($justify-content, $gap) {
+	display: flex;
+	justify-content: $justify-content;
+	gap: $gap;
+}
+
 @mixin flex-direction($flex-direction) {
 	display: flex;
 	flex-direction: $flex-direction;
@@ -44,4 +56,14 @@
 	display: inline-flex;
 	align-items: $align-items;
 	justify-content: $justify-content;
+}
+
+@mixin flex-gap($gap) {
+	display: flex;
+	gap: $gap;
+}
+
+@mixin flex-wrap($wrap) {
+	display: flex;
+	flex-wrap: $wrap;
 }
